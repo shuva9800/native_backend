@@ -50,11 +50,11 @@ exports.login = async (req, res) => {
 
   try {
     // Find user by email
-    const person = await User.findOne({ email: email });
+    const person = await User.findOne({email: email});
     if (!person) {
       return res.status(404).json({
         success: false,
-        message: "user nor register go to signin page",
+        message: "user not register go to signup page",
       });
     }
     //password checking
